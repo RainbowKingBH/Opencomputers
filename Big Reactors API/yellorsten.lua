@@ -30,10 +30,16 @@ while true do
   term.clear()
   io.write(gpu.setForeground(colors.yellow).. name); io.write(gpu.setForeground(colors.white).. version)
   if rstatus == true then
-    io.write(gpu.setForeground(colors.white).."Status: "); io.write(gpu.setForeground(colors.green).."Online\n")
+    gpu.setForeground(colors.white)
+    io.write("Status: \n");
+    gpu.setForeground(colors.green)
+    io.write("Online\n")
   end
   if rstatus == false then
-    io.write(gpu.setForeground(colors.white).."Status: "); io.write(gpu.setForeground(colors.red).."Offline\n")
+    gpu.setForeground(colors.white)
+    io.write("Status: \n")
+    gpu.setForeground(colors.red)
+    io.write("Offline\n")
   end
   io.write("Energy produced: "..repoduced"\n")
   io.write("Energy stored: "..restored.."/10000000 RF\n")
